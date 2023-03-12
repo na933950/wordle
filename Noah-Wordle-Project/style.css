@@ -1,0 +1,416 @@
+body {
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  font-family: Cambria;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+#modals {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+
+#modalwindow {
+  margin-top: 40px;
+  width: 490px;
+  height: 690px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 2px 2px 15px 15px rgb(224, 224, 224);
+  border-radius: 10px;
+  z-index: 30;
+  transition: 0.5s;
+}
+
+#close {
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+  float: left;
+  background-color: white;
+}
+
+#closebutton {
+  height: 20px;
+  float: right;
+  padding-right: 15px;
+  padding-top: 20px;
+}
+
+#closebutton:hover {
+  cursor: pointer;
+}
+
+#instructions {
+  height: 140px;
+  background-color: white;
+  float: left;
+  width: 100%;
+}
+
+#instructions h1 {
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+  font-size: 28px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+#instructions h2 {
+  float: left;
+  font-weight: 500;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  width: 100%;
+}
+
+#instructions ul {
+  float: left;
+  margin-top: 15px;
+  width: 90%;
+  padding-left: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#instructions ul li {
+  padding-bottom: 6px;
+}
+
+#examples {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  float: left;
+  font-family: Arial;
+}
+
+#examples h2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.example {
+  width: 100%;
+  float: left;
+  height: 80px;
+  background-color: white;
+}
+
+.example div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(123, 123, 123);
+  float: left;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 12px;
+  margin-left: 4px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.example .leftmost {
+  margin-left: 30px;
+}
+
+.example #correct {
+  background-color: rgb(88, 179, 88);
+  border: 2px solid rgb(88, 179, 88);
+  color: white;
+}
+
+.example #wrongspot {
+  background-color: rgb(210, 194, 49);
+  border: 2px solid rgb(210, 194, 49);
+  color: white;
+}
+
+.example #incorrect {
+  background-color: rgb(123, 123, 123);
+  border: 2px solid rgb(123, 123, 123);
+  color: white;
+}
+
+.example p {
+  width: 100%;
+  float: left;
+  padding-left: 30px;
+  padding-top: 8px;
+}
+
+.example .bold {
+  font-weight: bold;
+}
+
+#backdrop {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+
+.hidden {
+  display: none;
+}
+
+#missingletters {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  width: 200px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition-duration: 0.5s;
+}
+
+#correctword1 {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  width: 100px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+#modals2 {
+  width: 100%;
+  float: left;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/*****FINISHED CODE FOR MODAL WINDOW*****/
+
+#navbar {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  height: 65px;
+  float: left;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbuttondiv {
+  width: 20%;
+  float: left;
+  height: 100%;
+}
+
+#navbutton {
+  float: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 35px;
+  height: 35px;
+}
+
+.rightbutton {
+  width: 27px;
+  height: 27px;
+  margin-top: 21px;
+  margin-right: 15px;
+  float: right;
+}
+
+#title {
+  width: 60%;
+  float: left;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+}
+
+#title h1 {
+  font-weight: 1000;
+  font-size: 35px;
+}
+
+#otherbuttons {
+  width: 20%;
+  float: left;
+  height: 100%;
+}
+
+#questionbutton:hover {
+  cursor: pointer;
+}
+
+#wordlearea {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 375px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#wordleguesses {
+  width: 320px;
+  float: left;
+  height: 349px;
+  position: relative;
+  z-index: 0;
+  margin-top: 10px;
+}
+
+.guess {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+.letter {
+  width: 50px;
+  float: left;
+  margin-left: 5px;
+  outline: none;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  caret-color: transparent;
+  text-transform: uppercase;
+}
+
+.normal {
+  height: 50px;
+  transition-duration: 0.1s;
+}
+
+.condensed {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 0px;
+  transition-duration: 0.1s;
+}
+
+/*CLASSES FOR POSSIBLE LETTER RESULTS*/
+.null {
+  color: black;
+  background-color: white;
+  border: 2px solid rgb(196, 196, 196);
+}
+
+.nullkey {
+  color: black;
+  background-color: rgb(212, 212, 212);
+  border: 2px solid rgb(212, 212, 212);
+}
+
+.typed {
+  color: black;
+  background-color: white;
+  border: 2px solid rgb(130, 130, 130);
+}
+
+.correct {
+  background-color: rgb(88, 179, 88);
+  border: 2px solid rgb(88, 179, 88);
+  color: white;
+}
+
+.wrong {
+  background-color: rgb(123, 123, 123);
+  border: 2px solid rgb(123, 123, 123);
+  color: white;
+}
+
+.wrongplace {
+  background-color: rgb(210, 194, 49);
+  border: 2px solid rgb(210, 194, 49);
+  color: white;
+}
+
+/*END CLASSES*/
+
+#keyboardsection {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  float: left;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+#keyboard {
+  width: 500px;
+}
+
+.keydisplay {
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bolder;
+  min-height: 55px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 4px;
+  margin-left: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 4px;
+}
+
+.row {
+  width: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.special {
+  width: 40px;
+}
